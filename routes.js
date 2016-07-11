@@ -17,6 +17,7 @@ app.get('/consultants', Consultants.getAll)
 // Actualité
 var News = require('./models/news')
 app.get('/news', News.getAll)
+app.get('/news/:slug', News.getOne)
 app.post('/news', News.create)
 app.del('/news/:id', News.delete)
 
